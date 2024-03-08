@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/*CSS RESET */
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+* {
+margin: 0;
+}
+
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+
+input, button, textarea, select {
+font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+color: white;
+}
+
+/*APPS */
+body{
+    background-color: #03000a;
+    background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
+    color:white;
+    font-family: "Comic Neue", cursive;
+}
+
+/* container*/
+.container{
+    max-width:1200px;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+.todos{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:1rem;
+}
+
+.todo{
+    display:flex;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50%;
+    font-size:1.5rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+.mutation{
+    display:flex;
+    gap:0.75rem;
+}
+
+.form__input{
+    border-radius: 0.5rem;
+    color: white;
+    font-size:1.4rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.form__button{
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+
+.todo__status,
+.todo__delete{
+    border:none;
+    padding: 0;
+    line-height:1;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: none;
+    color: white;
+
+    &:hover{
+        transform: scale(1.15);
+    }
+}
+/* form */
+
+.form{
+    display:flex;
+    gap:0.5rem;
+    width: 50%;
+    margin: 1rem auto;
+}
+.form__input{
+    flex:1;
+    padding: 0.25rem 0.5rem;
+    outline: none;
+}
+
+@media (max-width: 420px) {
+    .title {
+      font-size: 2.5rem;
+    }
+  
+    .form {
+      width: 95%;
+    }
+  
+    .todo {
+      width: 95%;
+      font-size: 1.2rem;
+    }
+}
